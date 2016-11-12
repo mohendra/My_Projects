@@ -51,9 +51,12 @@ for i in range (0,len(y[0,:])):
         BB[j,i]=qqq
 
 #code for test
-tes=[3.568,3.54,3.119,2.814]
-posp=np.zeros((NClss,Nrows))
-po=np.zeros((NClss,Nrows))
+tes=[2.72,2.938,2.858,2.784]
+tesl=len(tes)
+posp=np.zeros(tesl)
+po=np.zeros((NClss))
+summm=po
+pospk=po
 import scipy.stats as sp
 for i in range(0,len(clsss)):
     men1=AA[i,:]
@@ -61,10 +64,11 @@ for i in range(0,len(clsss)):
     for j in range(0,len(men1)):
         gdpdf=sp.norm(men1[j],sten1[j]).pdf(tes[j])
 
-        posp[i,j]=gdpdf
-    po[j,i]=np.multiply((posp)*prior[j])
-summm=sum(po)
-pospk=np.divide(po,summm[i])
-maxxx=np.where(pospk=max(pospk))
+        posp[j]=gdpdf
+    po[i]=np.prod(posp)*prior[i]
+summm[i]=sum(po)
+pospk[i]=np.divide(po[i],summm[i])
+maxxx=np.where(pospk==max(pospk))
 maxxx=maxxx[0]
-result=clsss(maxxx)
+result=clsss[maxxx]
+print result
