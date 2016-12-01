@@ -3,3 +3,12 @@ The theory and working steps of decision tree are well explaind in the Udacity c
 http://napitupulu-jon.appspot.com/posts/decision-tree-ud.html
 The scikitlearn documentation of this as given bellow
 http://scikit-learn.org/stable/modules/tree.html
+
+
+In this folder
+
+StudentMain_1st.py # is the code for the 1st homework in Udacity for dicission tree
+clasifyDT.py.png # is the code for the defination class clasifyDT
+class_vis.py # Is the class visualization 
+prep_terrain_data.py # it the defination to generate training data
+studentMain.py.png # is the file containing the main code of Home work 1 of udacity introduction to machine learning course (Quiz) (https://classroom.udacity.com/courses/ud120/lessons/2258728540/concepts/24382785890923#) 
