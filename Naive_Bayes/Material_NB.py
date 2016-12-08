@@ -1,6 +1,7 @@
+
 import math
 import numpy as np
-x=[1,1,1,2,2,2]
+x=[1,1,1,2,2,2,3,3,3,4,4,4,5,5,5]
 xx=x
 xxx=(np.array(x)).astype(float)
 N=0
@@ -27,7 +28,7 @@ prior=c
 
 #second part for calculatind
 import numpy as np
-I=[[3.567,3.52,3.117,2.813],[3.569,3.53,3.118,2.812],[3.568,3.54,3.119,2.814],[2.70,2.936,2.856,2.782],[2.71,2.937,2.857,2.783],[2.72,2.938,2.858,2.784]]
+I=[[3.567,3.52,3.117,2.813],[3.569,3.53,3.118,2.812],[3.568,3.54,3.119,2.814],[2.70,2.936,2.856,2.782],[2.71,2.937,2.857,2.783],[2.72,2.938,2.858,2.784],[2.72,1.575,1.93,1.032],[2.73,1.578,1.932,1.033],[2.74,1.58,1.935,1.039],[2.71,2.3,1,1.35],[2.715,2.35,1.6,1.41],[2.78,2.4,1.7,1.5],[2.9,2.6,1.8,1.5],[2.95,2.62,1.83,1.57],[3,2.7,1.9,1.6]]
 y=np.array(I)
 NClss=len(clsss)
 Nrows=len(y[0,:])
@@ -49,7 +50,7 @@ for i in range (0,len(y[0,:])):
         BB[j,i]=qqq
 
 #code for test
-tes=[0.0,2.0,0.856,0.782]
+tes=[3.567,3.52,3.117,2.813]
 tesl=len(tes)
 posp=np.zeros(tesl)
 po=np.zeros((NClss))
@@ -77,8 +78,11 @@ if Sum_posp1>0:
     summm[i]=sum(po)
     pospk[i]=np.divide(po[i],summm[i])
     maxxx=np.where(pospk==max(pospk))
-    maxxx1=maxxx[0]
-    result=clsss[maxxx1]
-    print result
+    maxxx1=maxxx[0]2.70,2.936,2.856,9.782
+    if len(maxxx1)<=1:
+        result=clsss[maxxx1]
+        print result
+    else:
+        print ('No such material')
 else: 
     print ('No such material')
