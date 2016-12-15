@@ -1,4 +1,3 @@
-
 import math
 import numpy as np
 x=[1,1,1,2,2,2,3,3,3,4,4,4,5,5,5]
@@ -50,14 +49,15 @@ for i in range (0,len(y[0,:])):
         BB[j,i]=qqq
 
 #code for test
-tes=[3.567,3.52,3.117,2.813]
+
+
+#code for test
+#tes=[3,2.7,1.9,1.6]
+print "input the text d values "
+tes = [float(x) for x in raw_input().split()]
 tesl=len(tes)
 posp=np.zeros(tesl)
 po=np.zeros((NClss))
-Sum_posp=np.zeros((NClss))
-men2=len(AA[1,:])
-#prd=np.zeros((NClss))
-prd=np.zeros((NClss,men2))
 summm=po
 pospk=po
 import scipy.stats as sp
@@ -68,21 +68,17 @@ for i in range(0,len(clsss)):
         gdpdf=sp.norm(men1[j],sten1[j]).pdf(tes[j])
 
         posp[j]=gdpdf
-    
-    prd[i]=posp
-    Sum_posp[i]=sum(prd[i])
-    
     po[i]=np.prod(posp)*prior[i]
-Sum_posp1=sum(Sum_posp) 
-if Sum_posp1>0:
+potest=np.sum(posp)
+
+if potest>0:
     summm[i]=sum(po)
     pospk[i]=np.divide(po[i],summm[i])
+#if sum(pospk)>=0:
     maxxx=np.where(pospk==max(pospk))
-    maxxx1=maxxx[0]2.70,2.936,2.856,9.782
-    if len(maxxx1)<=1:
-        result=clsss[maxxx1]
-        print result
-    else:
-        print ('No such material')
-else: 
-    print ('No such material')
+    maxxx=maxxx[0]
+    summax=sum(maxxx)
+    result=clsss[maxxx]
+    print "The Tentetive material is %d"%result
+else:
+    print ('No material exist with this D value')
