@@ -1,6 +1,7 @@
 import math
 import numpy as np
 x=[1,1,1,2,2,2,3,3,3,4,4,4,5,5,5]
+mate=['Mat1', 'Mat2', 'Mat3', 'Mat4', 'Mat5']
 xx=x
 xxx=(np.array(x)).astype(float)
 N=0
@@ -79,6 +80,8 @@ if potest>0:
     maxxx=maxxx[0]
     summax=sum(maxxx)
     result=clsss[maxxx]
-    print "The Tentetive material is %d"%result
+    Mat_r=mate[maxxx]
+    #print "The Tentetive material is %d"%result
+    print "the material is : %s "%sss
 else:
     print ('No material exist with this D value')
