@@ -102,11 +102,11 @@ def build_tree(data, maximum_depth, minimum_sample):
 
 def ptree(node):
     if isinstance(node, dict):
-        print 'at', node['index'], 'for value',  node['value']
+        print 'at index', node['index'], 'for value',  node['value']
         ptree(node['left'])
         ptree(node['right'])
     else:
-        print [node]
+        print 'final group', [node]
 
 
 data =[[10,10,0],
