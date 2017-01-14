@@ -83,12 +83,14 @@ def split_node(node, maximum_depth, minimum_sample, innitial_depth):
 
     if len(left) <= minimum_sample:
         node['left'] = outcome(left)
+        return
     else:
         node['left'] = make_label(left)
         split_node(node['left'], maximum_depth, minimum_sample, innitial_depth+1)
 
     if len(right) <= minimum_sample:
         node['right'] = outcome(right)
+        return
     else:
         node['right'] = make_label(right)
         split_node(node['right'], maximum_depth, minimum_sample, innitial_depth+1)
@@ -100,6 +102,8 @@ def build_tree(data, maximum_depth, minimum_sample):
     split_node(root, maximum_depth, minimum_sample, 1)
     return root
 
+
+# function for printing the tree
 def ptree(node):
     if isinstance(node, dict):
         print 'at index', node['index'], 'for value',  node['value']
@@ -136,13 +140,34 @@ data =[[10,10,0],
 
 
 
-tree=build_tree(data, 2, 1)
+tree=build_tree(data, 1, 1)
 
 
 ptree(tree)
 
+# function for predicting a test data using the training tree
 
 
+def predict(node,raw):
+    if raw[node['index']] < node['value']:
+
+        if isinstance(node['left'], dict):
+            return predict(node['left'], raw)
+        else:
+            return node['left']
+    else:
+        if isinstance(node['right'], dict):
+            return predict(node['right'], raw)
+        else:
+            return node['right']
+
+Test_data = input('please input the values as [''a'',''b''] = ')
+
+
+#Test_data = [float(x) for x in input().split()]
+
+predicted_data = predict(tree,Test_data)
+print predicted_data
 
 
 
