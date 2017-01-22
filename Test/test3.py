@@ -64,7 +64,7 @@ def split_node(node,maxdepth, minsample,initialdepth):
         node['left']=outcome(left)
         node['right']=outcome(right)
         return
-    if len(left)<=minsample:
+    if len(left)<minsample:
         node['left']=outcome(left)
         return
     else:
@@ -99,7 +99,7 @@ data =[[10,10,0],
    [90,20,2],
    [100,20,2],
    [100,20,2],
-   [200,20,0,1],
+   [200,20,1],
    [200,10,1],
    [201,10,1],
    [300,10,1],
@@ -113,7 +113,7 @@ data =[[10,10,0],
    [110,20,2],
    [111,20,2,]]
 
-make_tree(data,1,1)
+make_tree(data,2,1)
 def ptree(node):
     if isinstance(node, dict):
         print 'at index', node['index'], 'for value',  node['value']
@@ -122,7 +122,7 @@ def ptree(node):
     else:
         print 'final group', [node]
 
-tree=make_tree(data, 2, 1)
+tree=make_tree(data, 1, 1)
 
 
 ptree(tree)
