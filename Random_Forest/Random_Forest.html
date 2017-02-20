@@ -193,6 +193,10 @@ div#notebook {
 <p>1) Fold the dataset to N number of sub dataset. These N number of dataset(with replacement) will then be used for the training of random forest model for n number of trees ( with minimum features = sqrt(length of features in the dataset).</p>
 <p>2) Grow the each tree to the largest extent possible using a cost function ( here we will use Gini Index).</p>
 <p>3) Find the maximum predicted output by the trees (for classification problem) or average of the predicted output (for regression problem)</p>
+<p>For the training and testing of this algorithm we will use a sonar dataset. The sonar dataset contains 111 patterns obtained by bouncing sonar signals off a metal cylinder at various angles and under various conditions. It also contains 97 patterns obtained from rocks under similar conditions. The transmitted sonar signal is a frequency-modulated chirp, rising in frequency. The data set contains signals obtained from a variety of different aspect angles, spanning 90 degrees for the cylinder and 180 degrees for the rock.</p>
+<p>Each pattern is a set of 60 numbers in the range 0.0 to 1.0. Each number represents the energy within a particular frequency band, integrated over a certain period of time. The integration aperture for higher frequencies occur later in time, since these frequencies are transmitted later during the chirp.</p>
+<p>The label associated with each record contains the letter "R" if the object is a rock and "M" if it is a mine (metal cylinder). The numbers in the labels are in increasing order of aspect angle, but they do not encode the angle directly.</p>
+<p>We will design our model on the top of this dataset to differentiate between the rock and metal as well as test it using the test sample from the same dataset. Here we go ...</p>
 
 </div>
 </div>
@@ -807,7 +811,7 @@ Mean Accuracy: 64.390%
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>.</p>
-<p><strong>Acknowledgement:</strong> I deeply thankful to <a href = "http://machinelearningmastery.com/about/"> <font color='blue'> Jason Brownlee </font> </a></p>
+<p><strong>Acknowledgement:</strong> I deeply thankful to Jason Brownlee</p>
 <p>.</p>
 
 </div>
