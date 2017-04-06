@@ -1,3 +1,9 @@
+'''This is a modified Version of Google's TensorFlow(TF) Tutorial. Here you will learn about the TF variable, placeholder and linear optimization model.
+
+By Dr. Mohendra Roy
+
+'''
+
 import tensorflow as tf
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -50,5 +56,11 @@ print("Initial weight: %s, Bias: %s, Loss: %s " % (wini, bini, lossini))  # The 
 
 print("Final weight: %s, Bias: %s, Loss: %s " % (wfi, bfi, lossfi))  # The weight, bias and loss after training
 
+''' Till this we just train our 1st linear model. However we want to test the model too  '''
 
+
+# Testing of the model
+xxx = 2
+y = sess.run(lm, {x: xxx})
+print("The calculated output for input  %x is = "%xxx, y)
 
