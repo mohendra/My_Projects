@@ -60,7 +60,7 @@ print("Final weight: %s, Bias: %s, Loss: %s " % (wfi, bfi, lossfi))  # The weigh
 
 
 # Testing of the model
-xxx = 2
-y = sess.run(lm, {x: xxx})
-print("The calculated output for input  %x is = "%xxx, y)
+xin = 2
+y = sess.run(lm, {x: xin})
+print("The calculated output for input  %x is = "%xin, y)
 
