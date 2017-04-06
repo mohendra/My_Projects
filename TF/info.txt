@@ -1,2 +1,3 @@
 
 This folder contain the porject in TensorFlow
+[1] The tf1.py is a TensorFlow program of a linear model(modified version of Google's TF tutorial). This file will teach you about the basic of TensorFlow(TF), such as TF Variables, Placeholder, session, linear model,  
