@@ -1,4 +1,4 @@
-'''This is a modified Version of Google's TensorFlow(TF) Tutorial. Here you will learn about the TF variable, placeholder and linear optimization model.
+'''This is a modified version of Google's TensorFlow(TF) Tutorial. Here you will learn about the TF variable, placeholder and linear optimization model.
 
 By Dr. Mohendra Roy
 
@@ -16,17 +16,15 @@ init = tf.global_variables_initializer()  # handler to initiate the global varia
 sess.run(init)
 wini = sess.run(w)
 bini = sess.run(b)
-# initial placeholder for input data and labels
 
+# initial placeholder for input data and labels
 x = tf.placeholder(tf.float32)  # for input data
-y = tf.placeholder(tf.float32)  # fro label
+y = tf.placeholder(tf.float32)  # for label
 
 # linear model
-
 lm = x*w + b
 
 # Setting the desired goal
-
 loss = tf.reduce_sum(tf.square(lm - y))
 lossini = sess.run(loss, {x: [1, 2, 3], y: [0, -1, -2]})
 
@@ -34,7 +32,7 @@ lossini = sess.run(loss, {x: [1, 2, 3], y: [0, -1, -2]})
 
 ''' To achieve this we will use a optimization method using the Gradient Descent Optimizer algorithm '''
 
-# The optimizer with Gradient Descent Optimizer
+# Optimization with Gradient Descent Optimizer
 
 op = tf.train.GradientDescentOptimizer(0.01)  # The number here is the step at which the optimization will descent
 ob = op.minimize(loss)  # The objective(ob) is to minimize the loss
@@ -50,7 +48,7 @@ for i in range(1000):
 
 wfi = sess.run(w)  # final weight after training
 bfi = sess.run(b)  # final bias after training
-lossfi = sess.run(loss, {x: [1, 2, 3], y: [0, -1, -2]})
+lossfi = sess.run(loss, {x: [1, 2, 3], y: [0, -1, -2]})  # loss after the training
 
 print("Initial weight: %s, Bias: %s, Loss: %s " % (wini, bini, lossini))  # The weight, bias and loss before training
 
@@ -62,5 +60,5 @@ print("Final weight: %s, Bias: %s, Loss: %s " % (wfi, bfi, lossfi))  # The weigh
 # Testing of the model
 xin = 2
 y = sess.run(lm, {x: xin})
-print("The calculated output for input  %x is = "%xin, y)
+print("The calculated test output for test input  %x is = " % xin, y)
 
