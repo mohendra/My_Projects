@@ -5,3 +5,4 @@
 5. Random_Forest folder contain developement of Random Forest algorithm from scratch. download the raw html file for study.
 6. Kaggle folder is the testing(ongoing and sample code of others) program for Kaggle
 7. TF folder is for the ongoing coding in TensorFlow
+8. LR folder is contain program for linear regression 
