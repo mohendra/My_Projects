@@ -6,4 +6,7 @@
 * [Random Forest](https://github.com/mohendra/My_Projects/tree/master/Random_Forest)
 * [TensorFlow codes](https://github.com/mohendra/My_Projects/tree/master/TF)
 * [Python codes](https://github.com/mohendra/My_Projects/tree/master/python)
-  
+
+### Decision Tree:
+The Decision Tree project contains the decision tree algorithm from scratch and its implementation for developing a Material search engine. 
+
