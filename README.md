@@ -1,4 +1,4 @@
-## Contents:
+## Content:
 * [Decision Tree](https://github.com/mohendra/My_Projects/tree/master/Decision_Tree)
 * [Kaggle competition](https://github.com/mohendra/My_Projects/tree/master/Kaggle)
 * [Linear Regression](https://github.com/mohendra/My_Projects/tree/master/LR)
