@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Linear_regre</title>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Linear_regre</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -13,8 +11,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1109,7 +1107,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2538,7 +2535,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3029,7 +3025,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8760,6 +8755,9 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
+[dir="rtl"] #ipython_notebook {
+  float: right !important;
+}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8962,8 +8960,14 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
+[dir="rtl"] #tabs li {
+  float: right;
+}
 ul#tabs {
   margin-bottom: 4px;
+}
+[dir="rtl"] ul#tabs {
+  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8986,6 +8990,16 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
+}
+[dir="rtl"] .list_toolbar .tree-buttons {
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-right {
+  padding-top: 1px;
+  float: left !important;
+}
+[dir="rtl"] .list_toolbar .pull-left {
+  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9122,6 +9136,9 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
+[dir="rtl"] #tree-selector a {
+  float: right;
+}
 #button-select-all {
   min-width: 50px;
 }
@@ -9211,6 +9228,9 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
+[dir="rtl"] #new-menu {
+  text-align: right;
+}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9255,6 +9275,9 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
+}
+[dir="rtl"] #running .col-sm-8 {
+  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9551,6 +9574,7 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
+  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9571,11 +9595,6 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
-}
-@-moz-document url-prefix() {
-  div.inner_cell {
-    overflow-x: hidden;
-  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11246,7 +11265,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 20ex;
+  width: 21ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11558,6 +11577,7 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
+  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11571,6 +11591,9 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
+}
+.terminal-app .terminal .xterm-rows {
+  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11631,8 +11654,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11643,9 +11668,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11760,8 +11787,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>By Mohendra Roy</p>
-<p>Linear regression is the simplest model in Machine Learning. In this class we will learn about how linear regression works. Before that, we have to understand about <strong>cost function</strong>.</p>
+<p>By <a href="https://scholar.google.co.in/citations?user=pTdyt0YAAAAJ&amp;hl=en">Mohendra Roy</a></p>
+<p>Linear regression is the simplest form of Machine Learning(ML) model. Here, we will try to understand and implement our first machine learning algorithm in TensorFlow(TF). The two major components in every ML algorithm are (a) Cost Function and (b) Optimization method. Therefore, before diving into the implementation of linear regression model in TensorFlow, let us first understand about the Cost Function.</p>
 
 </div>
 </div>
@@ -11771,17 +11798,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Cost Function:</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let us consider a case where we have size of object vs. price list. Suppose the size of the object is X and the corresponding price is P</p>
+<p><strong>Cost Function:</strong> Let us consider an example of object size vs. price list. Here, X is the object size and P is the corresponding price.</p>
 
 </div>
 </div>
@@ -11817,7 +11834,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is a linear model. Where price is going up with the size. However, data are scattered. Here we want to make a model which will closely predict the price of a object for a given size</p>
+<p>This is a linear model, where the price is going up with the size of the object. However, the data in the list are scattered. Here we want to make a model (linear fit) which will closely predict the price of an object for any given size.</p>
 
 </div>
 </div>
@@ -11827,7 +11844,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let us make a <strong>hypothesis</strong> of prediction as <strong>H = aX + b</strong>. Here <strong>a</strong> and <strong>b</strong> are the parameters that will shape the prediction accuracy. Here we will try to understant how this two parameters are going to effect the prediction model.</p>
+<p>Let us make a <strong>hypothesis</strong> of prediction as <strong>H = aX + b</strong>. Here <strong>a</strong> and <strong>b</strong> are the parameters that will shape the prediction accuracy. Here we will try to understand how this two parameters are going to affect the prediction model.</p>
 
 </div>
 </div>
@@ -11916,7 +11933,9 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -11925,7 +11944,9 @@ div#notebook {
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -12110,7 +12131,9 @@ AAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12119,7 +12142,9 @@ AAAASUVORK5CYII=
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -12350,7 +12375,9 @@ kRShQBcRSREKdBGRFPH/AZvjewd//R0hAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12359,7 +12386,9 @@ kRShQBcRSREKdBGRFPH/AZvjewd//R0hAAAAAElFTkSuQmCC
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -12551,11 +12580,11 @@ WEuC25snAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we can see that our liner hypothesis <strong>H = aX + b</strong> is very much depended on the parameters <strong>a</strong> and <strong>b</strong>. However, the model is not connected with the original data(this was just for demonstration).</p>
-<p>Here we want to make a model that will be optimized for the original data. i.e. the values of <strong>a</strong> and <strong>b</strong> will be adjusted based on the original data.</p>
-<p>For this purpose we have to use a error function or <strong>cost fucntion</strong>.</p>
-<p>In this case we will use a simple cost fucntion, called <strong>square error function</strong>. This function is very popular in solving <em>regression problems</em></p>
-<p>Let us consider this cost fucntion as <strong>C</strong>. Where ..</p>
+<p>As we can see that our liner hypothesis <strong>H = aX + b</strong> is very much depended on the parameters <strong>a</strong> and <strong>b</strong>. However, the model is not connected with the original data (this was just for demonstration). That means the model is independent of price values.</p>
+<p>Here we want to make a model that will be optimized for the original data, i.e. the values of <strong>a</strong> and <strong>b</strong> will be adjusted based on the original data (values of X and P).</p>
+<p>For this purpose, we have to use an error function or <strong>cost function</strong>.</p>
+<p>In this case, we will use a simple cost function, called <strong>square error function</strong>. This function is very popular in solving <em>regression problems</em></p>
+<p>Let us consider this cost function as <strong>C</strong>. Where ...</p>
 
 </div>
 </div>
@@ -12565,7 +12594,7 @@ WEuC25snAAAAAElFTkSuQmCC
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s1">r&#39;C(a, b) =\frac 1</span><span class="si">{2m}</span><span class="s1"> \sum_{i=1}^m (H_i - P_i)^2&#39;</span><span class="p">))</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C(a, b) =\frac 1</span><span class="si">{2m}</span><span class="s1"> \sum_{i=1}^m (H_i - P_i)^2&#39;</span><span class="p">))</span> 
 </pre></div>
 
 </div>
@@ -12576,7 +12605,9 @@ WEuC25snAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_latex output_subarea ">
@@ -12604,7 +12635,7 @@ $$C(a, b) =\frac 1{2m} \sum_{i=1}^m (H_i - P_i)^2$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For simplicity we will first evaluate the cost function for the linear model <strong>H = aX + 0</strong>,   i.e. b = 0 for all the time. Also we will evaluate the cost function manually in steps</p>
+<p>For simplicity, we will first evaluate the cost function for the linear model <strong>H = aX + 0</strong>,   i.e. b = 0 for all the time. Also, we will evaluate the cost function manually in steps</p>
 
 </div>
 </div>
@@ -12671,7 +12702,9 @@ $$C(a, b) =\frac 1{2m} \sum_{i=1}^m (H_i - P_i)^2$$
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12680,7 +12713,9 @@ $$C(a, b) =\frac 1{2m} \sum_{i=1}^m (H_i - P_i)^2$$
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -12937,7 +12972,9 @@ nBKBiEjM/X+aQoWMGvP2LQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12946,7 +12983,9 @@ nBKBiEjM/X+aQoWMGvP2LQAAAABJRU5ErkJggg==
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -13232,7 +13271,9 @@ BCIiEU5BICIS4RQEIiIRTkEgIhLhFAQiIhHu/wcIl/wLNY5W4gAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13241,7 +13282,9 @@ BCIiEU5BICIS4RQEIiIRTkEgIhLhFAQiIhHu/wcIl/wLNY5W4gAAAABJRU5ErkJggg==
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -13545,7 +13588,9 @@ QCmlPNz/AwYwOK3CclZ7AAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[24]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13554,7 +13599,9 @@ QCmlPNz/AwYwOK3CclZ7AAAAAElFTkSuQmCC
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -13838,7 +13885,9 @@ QmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[27]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13847,7 +13896,9 @@ QmCC
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -14119,7 +14170,9 @@ YII=
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[29]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -14128,7 +14181,9 @@ YII=
 
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+<div class="prompt"></div>
+
 
 
 <div class="output_png output_subarea ">
@@ -14362,8 +14417,20 @@ iVSRrqmIeC8B2O8rKF2BQV4HEqkqFRUR730BRJnZGuBPwHce5xGpMl2oFxERv1FPRURE/EZFRURE
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Our objective is to find the minimum value of cost function. From the above graph it is clear that the minimum value of the cost function can be find for a = 18.
-However, we have manually evalueated this. We need a automated method to find out the minimum of a cost function. That is where the role of <strong>optimization algorithm</strong> comes. Next we are going to discuss about the optimization algorithm.</p>
+<p>Our objective is to find the minimum value of cost function. From the above graphs, it is clear that the minimum value of the cost function can be find for a = 18.
+However, we have manually evaluated this. We need an automated method to find out the minimum of a cost function. That is where the role of <strong>optimization algorithm</strong> comes. Next, we are going to discuss about the optimization algorithm.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>References:</strong></p>
+<p>[1] Machine Learning by <a href="http://www.andrewng.org/">Andrew Ng.</a></p>
+<p>[2] TensorFlow <a href="https://www.tensorflow.org/get_started/get_started">tutorial</a></p>
 
 </div>
 </div>
@@ -14371,4 +14438,8 @@ However, we have manually evalueated this. We need a automated method to find ou
     </div>
   </div>
 </body>
+
+ 
+
+
 </html>
