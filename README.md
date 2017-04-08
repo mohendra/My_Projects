@@ -8,5 +8,16 @@
 * [Python codes](https://github.com/mohendra/My_Projects/tree/master/python)
 
 ### Decision Tree:
-The Decision Tree project contains the decision tree algorithm from scratch and its implementation for developing a Material search engine. 
+The Decision Tree project contains the decision tree algorithm from scratch and its implementation for developing a Material search engine.
+
+
+
+
+
+
+
+
+
+
+**&copy;** [Mohendra Roy](https://scholar.google.co.in/citations?user=pTdyt0YAAAAJ&hl=en)
 
