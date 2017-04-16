@@ -11787,7 +11787,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In our earlier class we have discussed about the cost function and its importance in lineaer regression. The objective in any regression method is to minimize the cost fucntion. In our previous class we did it manually. However we need a optimization algorithm to do it automatically. The gradient descent algorithm is one of the best optimization method for linear regression problem. Here we will try to understant about this algorithm.</p>
+<p>In our earlier class, we have discussed about the cost function and its importance in linear regression. The objective in any regression method is to minimize the cost function. In our previous class, we did it manually. However, we need an optimization algorithm to do it automatically. The gradient descent algorithm is one of the best optimization method for linear regression problem. Here we will try to understand about this algorithm.</p>
 
 </div>
 </div>
@@ -11815,7 +11815,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As we discussed, we choosed the sum of square error as a cost function for this problem. Here our objective is to find the minimum value of <strong>C</strong> by adjusting the parameter <strong>a</strong> and <strong>b</strong>. For simplicity let us consider <strong>a = P</strong>1 and <strong>b = P</strong>2</p>
+<p>As we discussed, we choose the sum of square error as a cost function for this problem. Here our objective is to find the minimum value of <strong>C</strong> by adjusting the parameter <strong>a</strong> and <strong>b</strong>. For simplicity let us consider <strong>a = P1</strong> and <strong>b = P2</strong></p>
 
 </div>
 </div>
@@ -11906,7 +11906,7 @@ $$P_k = P_k -\alpha\frac{\partial }{\partial P_k}C(P_1,P_2) \ ( for \ k =1 \ and
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here α is the learning rate or the step at which the gradient will descent. For simplicity let us take P2 = 0. The gradient of the cost function J(P1) with respect to P1 can be elastreted as given below. Now if the gradient is positive the value of P1 will decrease(as shown in green arrow). However if the gradient is negative then P1 will increase(as shown in maroon arrow), and eventually it will reach to minima of <strong>J</strong> at a step of α.</p>
+<p>Here α is the learning rate or the step at which the gradient will descent. For simplicity let us take P2 = 0. The gradient of the cost function J(P1) with respect to P1 can be illustrated as given below. Now if the gradient is positive the value of P1 will decrease (as shown by green arrow). However, if the gradient is negative then P1 will increase (as shown by maroon arrow), and eventually it will reach to minima of <strong>J</strong> with a step of α.</p>
 
 </div>
 </div>
@@ -12323,7 +12323,7 @@ gAAEIAABCEAAAhCAAARyT+D/A0GnzEwwb5aiAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The learning rate will tells us that how quickly or slowly the optimization process will happen. However their is a trade off between the learning rate and accuracy of the optimization. This can be well explained with this diagram below. Let us suppose one is to step down with a step of two(as shown in red line) then it will not reach the bottom floor. If the step down happen in one steps then it will reach to the bottom floor, however this will take much time compared to two step process. Therefore we have to choose a optimized learning rate that will provide fast and better accuracy.</p>
+<p>The learning rate will tell us that how quickly or slowly the optimization process will happen. However, there is a trade-off between the learning rate and accuracy of the optimization. This can be well explained with this diagram below. Let us suppose one is to step down with a step of two (as shown in red line) then it will not reach the bottom floor. If the step down happens in one steps then it will reach to the bottom floor, however this will take much time compared to two-step process. Therefore, we have to choose an optimized learning rate that will provide fast and better accuracy.</p>
 
 </div>
 </div>
@@ -12574,7 +12574,7 @@ $$for\ P_2:\ \frac{\partial }{\partial P_2}\frac{1}{2m}\sum_{i =1}^{m}(P_2 + P_1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In linear regression, the gradient descent will always find a gloabal minima, since their is no local minima for linear regression. Here we will try to manually impliment the gradient descent algorithm.</p>
+<p>In linear regression, the gradient descent will always find a global minimum, since there are no local minima for linear regression. Here we will try to manually implement the gradient descent algorithm.</p>
 
 </div>
 </div>
@@ -12682,7 +12682,7 @@ $$for\ P_2:\ \frac{\partial }{\partial P_2}\frac{1}{2m}\sum_{i =1}^{m}(P_2 + P_1
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">PP stored the optimized parameters, </span>
 
-<span class="sd">PPlt stored the all the values of parametres of each iteration</span>
+<span class="sd">PPlt stored all the values of parametres of each iteration</span>
 
 <span class="sd">CF stored the cost fuction of each iteration</span>
 
@@ -12703,7 +12703,7 @@ $$for\ P_2:\ \frac{\partial }{\partial P_2}\frac{1}{2m}\sum_{i =1}^{m}(P_2 + P_1
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;\nPP stored the optimized parameters, \n\nPPlt stored the all the values of parametres of each iteration\n\nCF stored the cost fuction of each iteration\n\n&#39;</pre>
+<pre>&#39;\nPP stored the optimized parameters, \n\nPPlt stored all the values of parametres of each iteration\n\nCF stored the cost fuction of each iteration\n\n&#39;</pre>
 </div>
 
 </div>
@@ -12714,7 +12714,7 @@ $$for\ P_2:\ \frac{\partial }{\partial P_2}\frac{1}{2m}\sum_{i =1}^{m}(P_2 + P_1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;optimization of parmeters.png&#39;</span><span class="p">))</span>
@@ -14742,7 +14742,7 @@ gCPgCDSEwP8PZPFumyp9FcIAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is the surface plot of the P1, P2 and cost function. From this graph it is clear that the optimum value of P1 =18 and P2 = -2.</p>
+<p>This is the surface plot of the P1, P2 and cost function. From this graph, it is clear that the optimum value of P1 =18 and P2 = -2.</p>
 
 </div>
 </div>
@@ -15018,7 +15018,7 @@ A+pdh5S6QjBdAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The above graph is the optimised linear regression model. Next we will impliment the same in TensorFlow.</p>
+<p>The above graph is the automatically optimised linear regression model. Next, we will implement the same in TensorFlow</p>
 
 </div>
 </div>
