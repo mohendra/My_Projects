@@ -12,10 +12,10 @@
 ### Decision Tree:
 This project contains the detailed implication(from scratch) of the decision tree algorithm. 
 
-# #​ ​# Kaggle competition
+##​​# Kaggle competition
 This project contains the ongoing coding(unpolished) and examples(of peers) for Kaggle. 
 
-#​ ​#​ ​# Linear Regression
+#​#​​# Linear Regression
 This project contains the implementation of linear regression algorithm from scratch.
 
 ### Material Search Engine
