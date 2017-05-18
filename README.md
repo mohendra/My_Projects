@@ -29,7 +29,7 @@ This project contains the detail implementation of Naive Bayes algorithm from sc
 This project contains the detail implementation of Random forest algorithm from scratch. 
 
 ### TensorFlow codes
-This project contains the various TensorFlow codes. This project focused on implementation of the various convolutional architecture for computer vision.
+This project contains the various TensorFlow codes. This project focused on implementation of the various machine learnin algorithms and deep learning algorithms in TensorFlow.
 
 ### Python Codes
 This project is for the python tutorials for beginners.
