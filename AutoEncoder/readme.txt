@@ -9,7 +9,7 @@ The Architecture of the AutoEncoder:
 · · · · · · · · · ·     -- I (input data, 1-deep) X [batch, 28, 28, 1]
 
 @ @ @ @ @ @ @ @ @ @ @   -- 1st Encoder conv. layer of: 10x10x1=>10 stride 1,SAME Padding WE1[10, 10, 1, 10],B1[10]
-                          Note: All Convolution Layers will be activated with Relu
+                           Note: All Convolution Layers will be activated with Relu
 \/\/\/\/\/\/\/\/\/\/    -- Max pool with kernal[1,2,2,1] and stride [1,2,2,1], SAME Padding                        
 ∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶    -- E1 [batch, 14, 14, 10](This is the output of the 1st Encoder convolution layer)
 
