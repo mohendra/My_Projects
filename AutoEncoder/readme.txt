@@ -19,8 +19,8 @@ The Architecture of the AutoEncoder:
 
 
    XXXXXXXXXXX        -- End of Encoder and Start of Decoder, Now for decoding we have to upsample the output
-                         using: {upsample1 = tf.image.resize_images(E3, size=(14,14), 
-                                                                 method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)}
+                         using: {upsample1 = tf.image.resize_images(E3, size=(14,14), method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)}
+
    ^^^^^^^^^^^        -- U1 Upsampling [Batch, 14, 14, 10]                                                              
    @ @ @ @ @ @        -- 1st Decoder conv. layer of: 5x5x10=>10 stride 1,SAME Padding WD1[5, 5, 10, 10],C1[10] 
  
