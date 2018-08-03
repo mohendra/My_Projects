@@ -1,4 +1,6 @@
 ## Content:
+* [AutoEncoder](https://github.com/mohendra/My_Projects/tree/master/AutoEncoder)
+* [Back Propagation](https://github.com/mohendra/My_Projects/tree/master/BackPropa)
 * [Decision Tree](https://github.com/mohendra/My_Projects/tree/master/Decision_Tree)
 * [Kaggle competition](https://github.com/mohendra/My_Projects/tree/master/Kaggle)
 * [Linear Regression](https://github.com/mohendra/My_Projects/tree/master/LR)
@@ -8,6 +10,12 @@
 * [TensorFlow codes](https://github.com/mohendra/My_Projects/tree/master/TF)
 * [Python codes](https://github.com/mohendra/My_Projects/tree/master/python)
 
+
+### Auto Encoder
+This project is to impliment denoising autoencoder(convolution architechture)
+
+### Back Propagation
+This project is to impliment backpropagation algorithm from scratch(Using only numpy)
 
 ### Decision Tree:
 This project contains the detailed implication(from scratch) of the decision tree algorithm.
