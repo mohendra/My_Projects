@@ -1,6 +1,6 @@
 ## Content:
 * [AutoEncoder:](https://github.com/mohendra/My_Projects/tree/master/AutoEncoder)
-$/n This project is to impliment denoising autoencoder(convolution architechture)
+(\n)This project is to impliment denoising autoencoder(convolution architechture)
 * [Back Propagation:](https://github.com/mohendra/My_Projects/tree/master/BackPropa)
 This project is to impliment backpropagation algorithm from scratch(Using only numpy)
 * [Decision Tree:](https://github.com/mohendra/My_Projects/tree/master/Decision_Tree)
