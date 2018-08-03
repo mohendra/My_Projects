@@ -1,5 +1,6 @@
 ## Content:
 * [AutoEncoder](https://github.com/mohendra/My_Projects/tree/master/AutoEncoder)
+This project is to impliment denoising autoencoder(convolution architechture)
 * [Back Propagation](https://github.com/mohendra/My_Projects/tree/master/BackPropa)
 * [Decision Tree](https://github.com/mohendra/My_Projects/tree/master/Decision_Tree)
 * [Kaggle competition](https://github.com/mohendra/My_Projects/tree/master/Kaggle)
